@@ -109,6 +109,8 @@ namespace WpfAlfaBankTestTask
         {
             if (articlesWrited)
             {
+                ExcelOut excelOut = new ExcelOut();
+                excelOut.Writer(articles);
                 TextBlockNotification.Text = "данные записаны в Excel файл";
             }
             else
@@ -121,6 +123,9 @@ namespace WpfAlfaBankTestTask
         {
             if (articlesWrited)
             {
+                WordOut wordOut = new WordOut();
+                wordOut.Writer(articles);
+
                 TextBlockNotification.Text = "данные записаны в Word файл";
             }
             else
