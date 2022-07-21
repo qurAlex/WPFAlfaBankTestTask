@@ -23,6 +23,44 @@ namespace WpfAlfaBankTestTask
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ButtonSysXml_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonRegex_Click(object sender, RoutedEventArgs e)
+        {
+
+        } 
+        
+        private void ButtonExcel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonWord_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonTxt_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
+   
+
+    
 }
