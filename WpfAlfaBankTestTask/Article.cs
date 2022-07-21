@@ -14,6 +14,12 @@ namespace WpfAlfaBankTestTask
         private string category;
         private DateTime pubDate;
 
+        public string Title() { return title; }
+        public string Link() { return link; }
+        public string Description() { return description; }
+        public string Category() { return category; }
+        public DateTime PubDate() { return pubDate;}
+
         public Article() { }
 
         public Article(string title, string link, string description, string category, DateTime pubDate)
