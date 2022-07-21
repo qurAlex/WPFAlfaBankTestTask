@@ -134,7 +134,7 @@ namespace WpfAlfaBankTestTask
             }
         }
 
-        private async void ButtonTxt_Click(object sender, RoutedEventArgs e)
+        private  void ButtonTxt_Click(object sender, RoutedEventArgs e)
         {
             if (articlesWrited)
             {
@@ -143,12 +143,12 @@ namespace WpfAlfaBankTestTask
                 {
                     for (int i = 0; i < articles.Count; i++)
                     {
-                        await writer.WriteLineAsync(articles[i].Title());
-                        await writer.WriteLineAsync(articles[i].Link());
-                        await writer.WriteLineAsync(articles[i].Description());
-                        await writer.WriteLineAsync(articles[i].Category());
-                        await writer.WriteLineAsync(articles[i].PubDate().DayOfWeek.ToString() + ", " + articles[i].PubDate().ToString());
-                        await writer.WriteLineAsync();
+                        writer.WriteLine(articles[i].Title());
+                        writer.WriteLine(articles[i].Link());
+                        writer.WriteLine(articles[i].Description());
+                        writer.WriteLine(articles[i].Category());
+                        writer.WriteLine(articles[i].PubDate().DayOfWeek.ToString() + ", " + articles[i].PubDate().ToString());
+                        writer.WriteLine();
                     }
                     writer.Close();
                     TextBlockNotification.Text = "данные записаны в текстовый файл";
